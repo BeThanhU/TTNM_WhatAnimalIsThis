@@ -25,7 +25,23 @@ colorBtns.forEach((item, i) => {
     })
 })
 
+/*==================== TESTIMONIAL ====================*/
+var swiperTestimonial = new Swiper('.image-slider', {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 48,
 
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+        clickable: true,
+    },
+    breakpoints:{
+        568:{
+            slidesPerView: 2, 
+        }
+    }
+});
 
 
 

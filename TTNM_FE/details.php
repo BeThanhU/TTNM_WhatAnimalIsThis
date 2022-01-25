@@ -7,7 +7,9 @@
     <title>Chi tiết con vật</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="details.css">
-
+    
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="swiper-bundle.min.css">
 </head>
 <body>
     <div class="navbar">
@@ -33,14 +35,30 @@
     while($row = $result->fetch_assoc()){
 
     echo "<section class='product-details'>
-            <div class='image-slider'>
-                <div class='product-images'>
-                    <img width='350px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh1']."'>
-                    <img width='350px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh2']."'>
-                    <img width='350px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh3']."'>
-                    <img width='350px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh4']."'>
-                    <img width='350px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh5']."'>
+            <div class='image-slider swiper swiper-container'>
+                <div class='product-images swiper-wrapper'>
+                    <div class='swiper-slide'>
+                        <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh1']."'>
+                    </div>
+
+                    <div class='swiper-slide'>
+                        <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh2']."'>
+
+                    </div>
+
+                    <div class='swiper-slide'>
+                        <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh3']."'>
+                    </div>
+
+                    <div class='swiper-slide'>
+                        <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh4']."'>
+                    </div>
+
+                    <div class='swiper-slide'>
+                        <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh5']."'>
+                    </div>
                 </div>
+                    <div class='swiper-pagination'></div>
             </div>
             <div class='details'>
                 <p class='product-brand'>Tên tiếng Việt: ".$row['TentiengViet']."</p>
@@ -54,7 +72,7 @@
                 <p class='product-brand'>Phân bố: ".$row['Phanbo']."</p>
                 <p class='product-brand'>Giá trị sử dụng: ".$row['Giatrisudung']."</p>
                 </div>
-        </section>;
+        </section>
 
     <section class='detail-des'>
         <h2 class='heading'>Đặc điểm hình thái</h2>
@@ -77,10 +95,12 @@
     }
     ?>
 
-    <script src="js/home.js"></script>
-    <script src="js/details.js"></script>
-
+    
 
     
 </body>
 </html>
+
+<script src="js/home.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/details.js"></script>
