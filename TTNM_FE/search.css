@@ -18,7 +18,14 @@ body{
 
 .wrapper{
   max-width: 450px;
-  margin: 150px auto;
+  margin: 50px auto;
+}
+.wrapper h1{
+  text-align: center;
+  align-content: center;
+  color: white;
+  height: 100px;
+  font-size: 50px;
 }
 
 .wrapper .search-input{
@@ -71,7 +78,7 @@ body{
   display: block;
 }
 .autocom-box li:hover{
-  background: #efefef;
+  background: blue;
 }
 
 .search-input .icon{
@@ -89,11 +96,13 @@ body{
 
 .link{
   text-align: center;
+  margin-top: auto;
 }
 
 .link a{
   color: white;
   font-size: 25px;
+  text-decoration: none;
 }
 
 .link a:hover{
