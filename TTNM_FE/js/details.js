@@ -12,7 +12,6 @@ productImages.forEach((item, i) => {
     })
 })
 
-
 //color buttons
 
 const colorBtns = document.querySelectorAll('.color-radio-btn');

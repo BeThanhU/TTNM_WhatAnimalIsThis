@@ -24,39 +24,38 @@
 	}
 	else{ 
         if(mysqli_num_rows($result1) != 0){
-            echo "<h2>Danh sách động vật tìm thấy theo tên tiếng Việt hoặc tên địa phương</h1>";
+            echo "<br><h2>Danh sách động vật tìm thấy theo tên tiếng Việt hoặc tên địa phương</h2><br>";
             echo "<table align='center'>";
             while($row = $result1->fetch_assoc()){
                 echo "<tr>
                 <td>
-                    <img width='300px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh1']."'></img>
+                    <img width='250px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh1']."'></img>
                 </td>
                 <td>
-                    <a href='./details.html?tendv=".$row['TentiengViet']."'>".$row['TentiengViet']."</a>
-
+                    <a href='./details.php?tendv=".$row['TentiengViet']."'>".$row['TentiengViet']."</a>
                     <br>
-                    <p>Tên địa phương: ".$row['Tendiaphuong']." </p>
+                    Tên địa phương: ".$row['Tendiaphuong']."
+                    <br>
                     ".$row['Tenkhoahoc']."
                 </td>			
-                </tr>";
+                </tr>";                
             }
             echo "</table>"; 
         }
-        if(mysqli_num_rows($result2
-        ) != 0){
-            echo "<h2>Danh sách động vật tìm thấy theo tên khoa học</h1>";
+        if(mysqli_num_rows($result2) != 0){
+            echo "<br><h2>Danh sách động vật tìm thấy theo tên khoa học</h2><br>";
             echo "<table align='center'>";
             while($row = $result2->fetch_assoc()){
                 echo "<tr>
                 <td>
-                    <img width='300px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh1']."'></img>
+                    <img width='250px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh1']."'></img>
                 </td>
                 <td>
-                    ".$row['Tenkhoahoc']."
+                <a href='./details.php?tendv=".$row['Tenkhoahoc']."'>".$row['Tenkhoahoc']."</a>
                     <br>
                     ".$row['TentiengViet']." 
                     <br>
-                    ".$row['Tendiaphuong']."
+                    Tên địa phương: ".$row['Tendiaphuong']."
                     </td>			
                 </tr>";
             }

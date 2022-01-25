@@ -14,6 +14,13 @@ inputBox.onkeyup = (e)=>{
             timkiem(abc.value);
             searchWrapper.classList.remove("active"); //hide autocomplete box
         }
+        var inputs = document.getElementById("abc");
+        inputs.addEventListener("keyup", function(event) {
+            if (event.key === "Enter") {
+                timkiem(abc.value);
+                searchWrapper.classList.remove("active"); //hide autocomplete box
+            }                 
+        });
         emptyArray = suggestions.filter((data)=>{
             //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
             return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
@@ -67,3 +74,4 @@ function timkiem(str) {
     xmlhttp.open("GET","result.php?kqtk="+str,true);
     xmlhttp.send();
     }
+

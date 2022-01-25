@@ -1,8 +1,40 @@
 *{
-    margin: 0;
     padding: 0;
-
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
+.navbar{
+    height: 15%;
+    display: flex;
+    align-items: center;
+    background-color: greenyellow;
+    height: 70px;
+}
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+    margin-right: 30px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .product-details{
     width: 80%;
     padding: 60px 10vw;
@@ -14,7 +46,6 @@
     width: 500px;
     height: 500px;
     position: relative;
-    background-image: url(../img/ca-heo-hong-sieu-hiem-xuat-hien-o-bien-do-son-795edc.jpg);
     background-size: cover;
 }
 
