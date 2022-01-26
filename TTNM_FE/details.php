@@ -36,27 +36,33 @@
 
     echo "<section class='product-details'>
             <div class='image-slider swiper swiper-container'>
-                <div class='product-images swiper-wrapper'>
-                    <div class='swiper-slide'>
-                        <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh1']."'>
-                    </div>
-
-                    <div class='swiper-slide'>
-                        <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh2']."'>
-
-                    </div>
-
-                    <div class='swiper-slide'>
-                        <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh3']."'>
-                    </div>
-
-                    <div class='swiper-slide'>
-                        <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh4']."'>
-                    </div>
-
-                    <div class='swiper-slide'>
-                        <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh5']."'>
-                    </div>
+                <div class='product-images swiper-wrapper'>";
+                if($row['Hinhanh3'] != NULL){
+                    echo " <div class='swiper-slide'>
+                    <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh1']."'>
+                    </div>";
+                }
+                if($row['Hinhanh3'] != NULL){
+                    echo " <div class='swiper-slide'>
+                    <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh2']."'>
+                    </div>";
+                }
+                if($row['Hinhanh3'] != NULL){
+                    echo " <div class='swiper-slide'>
+                    <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh3']."'>
+                    </div>";
+                }
+                if($row['Hinhanh4'] != NULL){
+                    echo " <div class='swiper-slide'>
+                    <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh4']."'>
+                    </div>";
+                }
+                if($row['Hinhanh5'] != NULL){
+                    echo " <div class='swiper-slide'>
+                    <img height='500px' src='https://drive.google.com/uc?export=view&id=".$row['Hinhanh5']."'>
+                    </div>";
+                }
+                echo "
                 </div>
                     <div class='swiper-pagination'></div>
             </div>
