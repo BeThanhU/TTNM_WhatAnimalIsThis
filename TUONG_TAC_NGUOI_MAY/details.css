@@ -1,0 +1,101 @@
+.hero{
+	background: green;
+	height: 100vh;
+	width: 100%;
+	position: relative;
+}
+
+.hero h1{
+	text-align: center;
+	padding-top: 80px;
+	font-size: 42px;
+	color: white;
+}
+
+.slide-row{
+	display: flex;
+	width: 3200px;
+	transition: 0.5s;
+}
+
+.slide-col{
+	width: 800px;
+	height: 400px;
+	position: relative;
+}
+
+.des-img{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+}
+
+.des-img img{
+	height: 100%;
+	border-radius: 10px;
+}
+
+.des-text{
+	background: black;
+	width: 520px;
+	height: 270px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 10px;
+	color: white;
+	padding: 45px;
+	box-sizing: border-box;
+	z-index: 2;
+}
+
+.des-text p{
+	font-size: 17px;
+	line-height: 24px;
+}
+
+.des-text h3{
+	margin: 20px 0 5px;
+	color: gray;
+}
+
+.content{
+	width: 800px;
+	height: 400px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+
+.button{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -50px;
+}
+
+
+.btn{
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	margin: 4px;
+	border-radius: 15px;
+	background: white;
+	cursor: pointer;
+}
+
+.active{
+	width: 45px;
+}
+
+.details{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+

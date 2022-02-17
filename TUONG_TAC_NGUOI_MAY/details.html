@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>What annimal is this?</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="details.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<div class="links">
+				<ul>
+					<li>
+						<a class="logo" href="index.html">What Animal Is This?</a>
+					</li>
+					<li>
+						<a class="active" href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+			<div class="search-box">
+				<input type="text" name="" placeholder="search" id="">
+			</div>
+		</div>
+
+
+		<div class="hero">
+			<h1>Ten con vat</h1>
+			<div class="content">
+				<div class="button">
+					<span class="btn active"></span>
+					<span class="btn"></span>
+					<span class="btn"></span>
+					<span class="btn"></span>
+				</div>
+				<div class="details">
+					<div class="slide-row" id="slide">
+
+						<div class="slide-col">
+							<div class="des-text">
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet incidunt laboriosam quibusdam, sapiente quod maiores impedit voluptatem cumque eos accusamus possimus libero assumenda, aut facilis, accusantium est, minus. Facere, culpa.</p>
+								<h3>Lorem, ipsum, dolor.</h3>
+								<p>Lorem, ipsum.</p>
+							</div>
+							<div class="des-img">
+								<img src="img/slide2.jpeg" alt="">
+							</div>
+						</div>
+					
+						<div class="slide-col">
+							<div class="des-text">
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet incidunt laboriosam quibusdam, sapiente quod maiores impedit voluptatem cumque eos accusamus possimus libero assumenda, aut facilis, accusantium est, minus. Facere, culpa.</p>
+								<h3>Lorem, ipsum, dolor.</h3>
+								<p>Lorem, ipsum.</p>
+							</div>
+
+							<div class="des-img">
+								<img src="img/slide3.jpeg" alt="">
+							</div>
+						</div>
+
+						<div class="slide-col">
+							<div class="des-text">
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet incidunt laboriosam quibusdam, sapiente quod maiores impedit voluptatem cumque eos accusamus possimus libero assumenda, aut facilis, accusantium est, minus. Facere, culpa.</p>
+								<h3>Lorem, ipsum, dolor.</h3>
+								<p>Lorem, ipsum.</p>
+							</div>
+							<div class="des-img">
+								<img src="img/slide2.jpeg" alt="">
+							</div>
+						</div>
+
+						<div class="slide-col">
+							<div class="des-text">
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet incidunt laboriosam quibusdam, sapiente quod maiores impedit voluptatem cumque eos accusamus possimus libero assumenda, aut facilis, accusantium est, minus. Facere, culpa.</p>
+								<h3>Lorem, ipsum, dolor.</h3>
+								<p>Lorem, ipsum.</p>
+							</div>
+							<div class="des-img">
+								<img src="img/slide3.jpeg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+
+		
+		<footer class="footer">
+			<div class="footer-start">
+				<p>Thành viên:</br>Nguyen Dinh Thanh B1805813</br>Pham Thi Bao Nhien B1800115</br>Đinh Vinh Thai B1805814</br>Phan Tuan Kiet B1704745</p>
+				<!-- <ul class="socials">
+					<li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+					<li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+					<li><a href="#"><i class="fa-brands fa-instagram-square"></i></a></li>
+				</ul> -->
+			</div>
+			<div class="footer-end">
+				<p>copyright &copy;2022</p>
+			</div>
+		</footer>
+	</div>
+
+
+	<script>
+		var btn = document.getElementsByClassName("btn");
+		var slide = document.getElementById("slide");
+
+		btn[0].onclick = function(){
+			slide.style.transform = "translateX(0px)";
+		}
+
+		btn[1].onclick = function(){
+			slide.style.transform = "translateX(-800px)";
+		}
+
+		btn[2].onclick = function(){
+			slide.style.transform = "translateX(-1600px)";
+		}
+
+		btn[3].onclick = function(){
+			slide.style.transform = "translateX(-2400px)";
+		}
+	</script>
+	
+</body>
+</html>
