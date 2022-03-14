@@ -1,0 +1,63 @@
+.content{    
+    height: max-content;
+}
+.content h3{
+    font-size: 25px;
+    text-align: center;
+    margin: 10px auto;
+}
+.content-search, .search-result{
+    border: 1px solid black;
+    margin: 10px;
+}
+.content-search-bar{
+    margin: 0 auto;
+    width: max-content;
+}
+.content-search-bar input{
+    margin: auto;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 30px;
+    width: 400px;
+    color: #fff;
+    background-color: #159912;
+}
+.content-search-select{
+    margin: 15px auto;
+    width: max-content;
+}
+.content-search-select select{
+    height: 30px;
+    width: 120px;
+    margin: 0 20px;
+    background-color: #159912;
+    color: white;
+}
+.content-search-submit{
+    width: max-content;
+    margin: auto;
+}
+button{
+    height: 40px;
+    width: 120px;
+    font-size: 22px;
+    background-color: #159912;
+    color: white;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+button:hover{
+    color: aqua;
+    background-color: #206116;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .content-search-select select{
+        display: block;
+        margin: 10px;
+        width: 200px;
+    }
+}

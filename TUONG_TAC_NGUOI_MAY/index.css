@@ -8,7 +8,6 @@
   font-family: sans-serif;
   font-weight: 600;
   box-sizing: border-box;
-
 }
 
 body{
@@ -27,6 +26,7 @@ body{
 
 /*START NAVBAR*/
 .navbar{
+  height: 15vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -34,8 +34,12 @@ body{
   padding: 2rem;
   box-shadow: 0rem 0rem 0.8rem rgba(0, 0, 0, 0.5);
 }
-
-
+.logo{
+  width: 100px;
+}
+.links{
+  border: 1px solid red;
+}
 ul li{
   list-style: none;
   display: inline-block;
@@ -47,10 +51,13 @@ ul li a{
   color: black;
   position: relative;
 }
+[class*="col"] {
+  width: 100%;
+}
 
-.logo{
+.name{
   color: #207335;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 input{
@@ -58,7 +65,9 @@ input{
   outline: none;
   border: none;
   background: var(--primary-color);
-  border-radius: 1rem;
+  border-radius: 50px;
+  height: 50px;
+  width: 300px;
 }
 
 input::placeholder{
@@ -68,6 +77,8 @@ input::placeholder{
 
 .active{
   color: var(--primary-color);
+  font-size: 20px;
+  text-align: left;
 }
 
 a::after{
@@ -82,7 +93,10 @@ a::after{
   transition: 0.3s ease-in-out;
   }
 
-a:hover::after{
+.active:hover::after{
+  width: 100%;
+}
+.name:hover::after{
   width: 100%;
 }
 /*END NAVBAR*/

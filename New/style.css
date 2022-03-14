@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto";
+}
+a{
+    text-decoration: none;
+}
+.topnav{
+    background-color: #206116;
+    overflow: hidden;
+    display: flex;
+}
+.topnav-tag{
+    display: flex;
+    width: 100%;
+    margin: auto;    
+}
+.topnav-icon{
+    margin: auto;
+    font-size: 30px;
+    display: none;
+}
+.topnav-icon i{
+    color: white;
+}
+.topnav-icon i:hover{
+    color: black;
+}
+.topnav-logo {  
+    margin: auto;  
+    text-align: center;
+}
+.topnav-logo img{
+    width: 70%;
+    height: 80px;
+}
+.topnav-title{
+    margin: auto;
+    margin-left: 20px;
+    width: 360px;
+}
+.topnav-title a{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+}
+.topnav-links{
+    margin: auto;
+    width: 100%;
+    text-align: right;    
+}
+.topnav-links a{
+    font-size: 20px;
+    color: #fff;
+    margin-right: 25px;
+}
+a:hover{
+    color: aqua;
+    border-bottom: 2px solid aqua ;
+    transition: 0.5s ease-in-out;
+
+}
+
+
+.topnav-search{
+    margin: auto;
+    text-align: center;
+    margin-right: 50px;
+}
+.topnav-search input{
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    height: 30px;
+    width: 250px;
+    color: #fff;
+    background-color: #159912;
+}
+::placeholder{
+    color: #fff;
+    font-size: 15px;
+}
+
+.footer{
+    background-color: #206116;
+    color: white;
+    font-size: 17px;
+    text-align: center;
+}
+.footer .footer-author{
+    display: flex;
+    margin: auto;    
+}
+.footer .footer-author p{
+    margin: 20px auto;   
+}
+
+
+@media screen and (max-width: 768px) {
+    .topnav{
+        height: 70px;
+        margin: auto;
+    }
+    .topnav-logo img{
+        width: 50px;
+        height: 70px;
+    }
+    .topnav-title{
+        width: max-content;
+    }
+    .topnav-links{
+        display: none;
+    }
+    .topnav-search{
+        display: none;
+    }
+    .topnav-icon{
+        display: block;
+    }
+    .content{
+        display: block;
+        margin: 10px;
+    }
+    .content-introduce, .content-trend{
+        margin: 0;
+        margin-top: 10px;
+        height: max-content;
+        width: auto;
+    }
+    .footer .footer-author{
+        display: block;
+    }
+    .footer .footer-author p{
+        margin: 5px;   
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .topnav.responsive {
+        display: block;
+        height: max-content;
+    }
+    .topnav.responsive .topnav-tag {
+        margin: auto;    
+    }
+    .topnav.responsive .topnav-links {
+      display: block;
+      text-align: center;
+      background-color: #159912;
+      margin: 5px 0;
+      border: 1px solid black;
+    }
+    .topnav.responsive .topnav-links :hover{
+        background-color: #206116;
+    }
+    .topnav.responsive .topnav-search{
+        display: block;
+        margin: 15px 0;
+    }
+    .topnav.responsive .topnav-search input{
+        height: 20px;
+    }
+  }
+  
