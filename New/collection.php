@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome/css/all.css">
     <link rel="stylesheet" href="collection.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="topnav" id="myTopnav">
+<div class="topnav" id="myTopnav">
         <div class="topnav-tag">
             <div class="topnav-logo">
                 <a href="index.html"><img src="img/narbar-logo.svg"></a>
@@ -18,8 +18,8 @@
             </div>
             <div class="topnav-icon">
                 <a href="javascript:void(0);" class="icon" onclick="showNarbav()">
-                    <i class="fa fa-bars"></i>
-                  </a>      
+                    <i class="fa-solid fa-bars"></i>
+                </a>      
             </div> 
         </div>
         <div class="topnav-links">
@@ -28,7 +28,10 @@
             <a href="search.html" class="active">TÌM KIẾM</a>
         </div>
         <div class="topnav-search">
-            <input type="text" placeholder="Nhập tên động vật...">
+            <input type="text" placeholder="Nhập tên động vật..." id="abc">
+            <a onclick="Redirect(abc.value)" style="color: inherit;" >
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
         </div>                
     </div>
     <div class="content">
@@ -90,7 +93,7 @@
         </div>
     </div>
 
-<script src="index.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>

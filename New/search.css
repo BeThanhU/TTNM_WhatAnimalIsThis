@@ -11,19 +11,28 @@
     margin: 10px;
 }
 .content-search-bar{
-    margin: 0 auto;
-    width: max-content;
-}
-.content-search-bar input{
     margin: auto;
+    text-align: center;
+    background-color: #159912;
+    border-radius: 50px;
+    height: 30px;
+    width: 30%;
     padding: 0.5rem 1rem;
     outline: none;
     border: 1px solid black;
-    border-radius: 50px;
-    height: 30px;
-    width: 400px;
-    color: #fff;
+}
+.content-search-bar input{
     background-color: #159912;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    width: 85%;
+}
+
+.content-search-bar i{
+    font-size: 25px;
+    color: white;
+    padding: 2px
 }
 .content-search-select{
     margin: 15px auto;

@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="font-awesome/css/all.css">
+
     <link rel="stylesheet" href="search.css">
     <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
+<body onload="timkiem(abc.value)">
     <div class="topnav" id="myTopnav">
         <div class="topnav-tag">
             <div class="topnav-logo">
@@ -19,8 +20,8 @@
             </div>
             <div class="topnav-icon">
                 <a href="javascript:void(0);" class="icon" onclick="showNarbav()">
-                    <i class="fa fa-bars"></i>
-                  </a>      
+                    <i class="fa-solid fa-bars"></i>
+                </a>      
             </div> 
         </div>
         <div class="topnav-links">
@@ -29,15 +30,19 @@
             <a href="search.html" class="active">TÌM KIẾM</a>
         </div>
         <div class="topnav-search">
-            <input type="text" placeholder="Nhập tên động vật...">
+            <input type="text" placeholder="Nhập tên động vật..." id="xyz">
+            <a onclick="Redirect(xyz.value)" style="color: inherit;" >
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+
         </div>                
     </div>
     <div class="content">
         <div class="content-search">
-            <form>
             <h3>TÌM KIẾM NÂNG CAO</h3>
             <div class="content-search-bar">
-                <input type="text" placeholder="Nhập tên động vật...">
+                <input id="abc" type="text" placeholder="Nhập tên động vật...">
+                </a>
             </div>
             <div class="content-search-select">
                 <select>
@@ -54,15 +59,12 @@
                 </select>
             </div>
             <div class="content-search-submit">
-                <button type="submit">Tìm kiếm</button>
-
+                <button onclick="timkiem(abc.value)" type="submit">Tìm kiếm</button>
             </div>
-        </form>        
         </div>
         <div class="search-result">
             <h3>KẾT QUẢ TÌM KIẾM</h3>
-            <div class="results">
-
+            <div id="ketquatk" style="text-align: center;">           
             </div>
         </div>
     </div>
@@ -79,8 +81,14 @@
             <br>
         </div>
     </div>
-
-<script src="index.js"></script>
+   
+<script src="js/script.js"></script>
+<!-- <script>
+    function input(){
+        console.log("dasas")
+        document.getElementById("abc").innerText= "<?php echo $kq ?>";      
+      }
+</script> -->
 
 </body>
 </html>

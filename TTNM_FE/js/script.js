@@ -61,6 +61,7 @@ function showSuggestions(list){
     suggBox.innerHTML = listData;
 }
 function timkiem(str) {
+    console.log(str);
     if (str.length==0) {
         document.getElementById("ketquatk").innerHTML="";
         return;

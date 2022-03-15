@@ -14,17 +14,21 @@
     font-size: 22px;
 }
 .content-introduce p{
-    margin: 15px;
-    text-indent: 15px; 
+    margin: 15px 20px;
+    text-indent: 15px;
+    font-size: 18px;
 }
 .content-introduce ul{
-    margin: 15px;
+    margin: 15px 20px;
     text-indent: 15px; 
+    font-size: 18px;
 }
 .content-introduce li{
-    margin: 15px;
+    margin: 15px 20px;
     list-style-type: none;
-    text-indent: 25px;    
+    text-indent: 25px;
+    font-size: 18px;
+     
 }
 .content-trend{
     text-align: center;

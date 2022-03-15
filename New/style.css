@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap');
 *{
-    margin: 0px;
-    padding: 0px;
-    font-family: "Roboto";
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
 }
 a{
     text-decoration: none;
@@ -11,13 +11,16 @@ a{
     background-color: #206116;
     overflow: hidden;
     display: flex;
+    margin: auto;
+    text-align: center;
 }
 .topnav-tag{
     display: flex;
-    width: 100%;
     margin: auto;    
 }
 .topnav-icon{
+    right: 35px;
+    position: absolute;
     margin: auto;
     font-size: 30px;
     display: none;
@@ -26,7 +29,7 @@ a{
     color: white;
 }
 .topnav-icon i:hover{
-    color: black;
+    color: aqua;
 }
 .topnav-logo {  
     margin: auto;  
@@ -38,51 +41,59 @@ a{
 }
 .topnav-title{
     margin: auto;
-    margin-left: 20px;
-    width: 360px;
+    width: max-content;
 }
 .topnav-title a{
     font-size: 25px;
     color: #fff;
-    font-weight: 500;
+    font-weight: 600;
 }
 .topnav-links{
-    margin: auto;
-    width: 100%;
-    text-align: right;    
+    margin: auto 0;
+    text-align: right;
 }
 .topnav-links a{
+    width: max-content;
+    font-weight: 600;
     font-size: 20px;
+    margin: 0 10px;
     color: #fff;
-    margin-right: 25px;
 }
 a:hover{
     color: aqua;
-    border-bottom: 2px solid aqua ;
+    border-bottom: 1px solid aqua ;
     transition: 0.5s ease-in-out;
-
 }
-
 
 .topnav-search{
     margin: auto;
     text-align: center;
     margin-right: 50px;
-}
-.topnav-search input{
-    padding: 0.5rem 1rem;
-    outline: none;
-    border: 1px solid black;
+    background-color: #159912;
     border-radius: 50px;
     height: 30px;
-    width: 250px;
-    color: #fff;
-    background-color: #159912;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 1px solid white;
 }
+.topnav-search input{
+    background-color: #159912;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    width: 85%;
+}
+.topnav-search i{
+    font-size: 25px;
+    color: white;
+    padding: 2px;
+    cursor: pointer;
+}
+
 ::placeholder{
     color: #fff;
-    font-size: 15px;
-}
+    font-size: 18px;}
 
 .footer{
     background-color: #206116;
@@ -98,19 +109,22 @@ a:hover{
     margin: 20px auto;   
 }
 
-
 @media screen and (max-width: 768px) {
     .topnav{
         height: 70px;
         margin: auto;
+        text-align: center;
+    }
+    .topnav-logo{
+        position: absolute;
+        left: 30px;
+        top: 0;
     }
     .topnav-logo img{
         width: 50px;
         height: 70px;
     }
-    .topnav-title{
-        width: max-content;
-    }
+
     .topnav-links{
         display: none;
     }
@@ -143,21 +157,29 @@ a:hover{
         height: max-content;
     }
     .topnav.responsive .topnav-tag {
-        margin: auto;    
+        margin: auto;
+        height: 70px;    
+    }
+    .topnav.responsive .topnav-icon{
+        padding: 19px 5px;
     }
     .topnav.responsive .topnav-links {
       display: block;
       text-align: center;
+      padding: 10px;
       background-color: #159912;
-      margin: 5px 0;
       border: 1px solid black;
     }
-    .topnav.responsive .topnav-links :hover{
+    .topnav.responsive .topnav-links a{
+        margin: auto 20px;
+        width: max-content;
+    }
+    .topnav.responsive .topnav-links a:hover{
         background-color: #206116;
     }
     .topnav.responsive .topnav-search{
         display: block;
-        margin: 15px 0;
+        margin: 15px auto;
     }
     .topnav.responsive .topnav-search input{
         height: 20px;
