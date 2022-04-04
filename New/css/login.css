@@ -1,0 +1,88 @@
+.form{
+    padding: 25px 30px;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .form header{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #2d9e29;
+  }
+  
+  .form form .error-text{
+    color: #ca2737;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    background: #f5d8db;
+    border: 1px solid #f5d8db;
+    margin-top: 10px;
+    display: none;
+  }
+  .form form .field{
+    display: flex;
+    margin: 5px 0;
+    flex-direction: column;
+    position: relative;
+  }
+  .form form .field label{
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .form form .input input{
+    height: 40px;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(187, 186, 186);
+  }
+  .form form .field input{
+    outline: none;
+  }
+  .form form .image input{
+    font-size: 18px;
+  }
+  
+  .form form .button input{
+    height: 45px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    background: #2d9e29;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .form form .button input:hover{
+    background: #32849b;
+  }
+  .form form .field i{
+    position: absolute;
+    right: 15px;
+    top: 75%;
+    color: #ccc;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  .form form .field i.active::before{
+    color: #333;
+    content: "\f070";
+  }
+  .form .link{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  .form .link a{
+    color: #0004fc;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .form .link a:hover{
+    color: #ff162d;
+  }

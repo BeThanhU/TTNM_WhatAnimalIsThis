@@ -12,7 +12,7 @@
         }
         else{
         // window.location=("search.php?kqtk="+xyz);
-        window.location=("search.html?kqtk="+xyz);
+        window.location=("search.php?kqtk="+xyz);
         }      
     }
 
@@ -27,7 +27,7 @@
                 document.getElementById("ketquatk").innerHTML=this.responseText;      
           }
       }
-      xmlhttp.open("GET","search.php?kqtk="+str,true);
+      xmlhttp.open("GET","php/search.php?kqtk="+str,true);
       xmlhttp.send();
       }
 

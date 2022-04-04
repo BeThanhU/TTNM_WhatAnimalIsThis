@@ -1,0 +1,42 @@
+.all{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    width: 100%;
+    background-color: #31b82c;
+}
+.navbar{
+    width: 90%;
+    margin: auto;
+    background-color: #31b82c !important;
+}
+.navbar-brand{
+    color: white !important;
+    font-size: 20px;
+    font-weight: 700;
+}
+.navbar-nav{
+    margin: auto;
+    
+}
+.nav-item{
+    margin: 0 20px;
+}
+.nav-link{
+    font-size: 18px;
+    font-weight: 600;
+    color: white !important;
+}
+.form-inline{
+    background-color: white;
+}
+.form-control{
+    min-width: 200px;
+    border: none;
+    max-width: 300px !important;
+    
+}
+.btn{
+    border: none;
+}

@@ -1,0 +1,132 @@
+.content{    
+    height: max-content;
+}
+
+.content-search{
+    border: 1px solid black;
+    margin: 10px;
+}
+.content-search h3{
+    font-size: 25px;
+    text-align: center;
+    margin: 10px auto;
+}
+.content-search-bar{
+    margin: auto;
+    text-align: center;
+    background-color: #159912;
+    border-radius: 50px;
+    height: 30px;
+    width: 30%;
+    border: 1px solid black;
+    padding: 10px 0;
+}
+.content-search-bar input{
+    background-color: #159912;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    width: 85%;
+    outline: none;
+}
+
+.content-search-bar i{
+    font-size: 25px;
+    color: white;
+    padding: 2px
+}
+.content-search-select{
+    margin: 15px auto;
+    width: max-content;
+    display: flex;
+}
+.content-search-select select{
+    height: 30px;
+    margin: 0 20px;
+    background-color: #159912;
+    color: white;
+    width: max-content;
+}
+.content-search-select select option{
+    border: 1px solid red;
+}
+.content-search-submit{
+    width: max-content;
+    margin: auto;
+}
+
+button{
+    height: 40px;
+    width: 120px;
+    font-size: 22px;
+    background-color: #159912;
+    color: white;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+button:hover{
+    color: aqua;
+    background-color: #206116;
+    cursor: pointer;
+}
+.search-result h3 {
+    font-size: 25px;
+    text-align: center;
+    margin: 10px auto;
+}
+#ketquatk{
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+}
+#ketquatk h2{
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+.div-results{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.div-results-items{
+    width: 400px;
+    height: max-content;
+    margin: 20px auto;
+}
+.result-img{
+    text-align: center;
+}
+.result-name{
+    text-align: center;
+}
+.div-results-2{
+    margin: auto;
+    width: 400px;
+    height: max-content;
+    margin: 20px auto;
+}
+.result-img-2{
+    text-align: center;
+}
+.result-name-2{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .content-search-select{
+        display: block;
+    }
+    .content-search-select-citems{
+        text-align: right;
+    }    
+    .content-search-select-items select{
+        margin: 10px;
+        width: 200px;
+    }
+    .content-search-bar{
+        width: 70%;
+    }
+    .div-results{
+        display: block;
+    }
+}
