@@ -1,16 +1,15 @@
 .content{    
     height: max-content;
 }
-
-.content-search{
-    border: 1px solid black;
-    margin: 10px;
-}
-.content-search h3{
+.content h3{
     font-size: 25px;
     text-align: center;
     margin: 10px auto;
 }
+.content-search{
+    margin: 10px;
+}
+
 .content-search-bar{
     margin: auto;
     text-align: center;
@@ -18,7 +17,6 @@
     border-radius: 50px;
     height: 30px;
     width: 30%;
-    border: 1px solid black;
     padding: 10px 0;
 }
 .content-search-bar input{
@@ -92,6 +90,9 @@ button:hover{
     width: 400px;
     height: max-content;
     margin: 20px auto;
+}
+.div-results-items a{
+    font-weight: 600;
 }
 .result-img{
     text-align: center;

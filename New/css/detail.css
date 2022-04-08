@@ -49,13 +49,12 @@
 }
 .heading{
     font-size: 30px;
-    margin: 10px 0;
+    margin: 15px 0;
 }
-
 
 .des{
     color: black;
-    text-indent: 30px;
+    text-indent: 50px;
     font-size: 18px;
 }
 .baoton{

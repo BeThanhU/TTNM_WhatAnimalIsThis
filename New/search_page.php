@@ -8,20 +8,26 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body onload="timkiem(abc.value)">
+<body onload="timkiem(input.value)">
     <?php include 'header.php'; ?>
     <div class="content">
+        <h3>TÌM KIẾM NÂNG CAO</h3>
         <div class="content-search">
-            <h3>TÌM KIẾM NÂNG CAO</h3>
             <div class="content-search-bar">
-                <input id="xyz" type="text" placeholder="Nhập tên động vật...">
+                <?php 
+                    if (isset($_GET['input']))
+                        $input = $_GET['input'];
+                    else
+                        $input = "";
+                      ?>
+                <input id="input" type="text" placeholder="Nhập tên động vật..."  value="<?php echo $input ?>">
                 </a>
             </div>
             <div class="content-search-select">
-                <?php include 'php/selected.php'; ?>
+                <?php include 'selected.php'; ?>
             </div>
             <div class="content-search-submit">
-                <button onclick="timkiem(xyz.value)" type="submit">Tìm kiếm</button>
+                <button onclick="timkiem(input.value, Lop.value, Bo.value, Ho.value)" type="submit">Tìm kiếm</button>
             </div>
         </div>
         <div class="search-result">

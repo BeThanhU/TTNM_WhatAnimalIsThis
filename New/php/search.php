@@ -1,30 +1,198 @@
 <?php
-$con = new mysqli("localhost","root","","db_animals");
-if ($con -> connect_errno) {
-    echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-exit();
-}    $con->set_charset("utf8");
+    $con = new mysqli("localhost","root","","db_animals");
+    if ($con -> connect_errno) {
+        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+    exit();
+    }   
+    $con->set_charset("utf8");
+
     $kq=$_GET['kqtk'];
+    $checkLop=$_GET['Lop'];
+    $checkBo=$_GET['Bo'];
+    $checkHo=$_GET['Ho'];
+    if($checkLop == "Tất cả" && $checkBo == "Tất cả" && $checkHo == "Tất cả")
+    {
+        $sql = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+        FROM animals LEFT JOIN animals_img 
+        ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+        WHERE ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenKhoaHoc LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+        GROUP BY animals.TenKhoaHoc";
     
-    $sql = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
-    FROM animals LEFT JOIN animals_img 
-    ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
-    WHERE (animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenKhoaHoc LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%')
-    GROUP BY animals.TenKhoaHoc";
+        $sql1 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+        FROM animals LEFT JOIN animals_img 
+        ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+        WHERE ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+        GROUP BY animals.TenKhoaHoc
+        ORDER BY animals.TenTiengViet";
+    
+        $sql2 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+        FROM animals LEFT JOIN animals_img 
+        ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+        WHERE (animals.TenKhoaHoc LIKE '%".$kq."%')
+        GROUP BY animals.TenKhoaHoc
+        ORDER BY animals.TenKhoaHoc";
+    }
+    else
+        if($checkBo == "Tất cả" && $checkHo == "Tất cả")
+        {
+            $sql = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+            FROM animals LEFT JOIN animals_img 
+            ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+            WHERE (animals.Lop = '".$checkLop."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenKhoaHoc LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+            GROUP BY animals.TenKhoaHoc";
+        
+            $sql1 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+            FROM animals LEFT JOIN animals_img 
+            ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+            WHERE (animals.Lop = '".$checkLop."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+            GROUP BY animals.TenKhoaHoc
+            ORDER BY animals.TenTiengViet";
+        
+            $sql2 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+            FROM animals LEFT JOIN animals_img 
+            ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+            WHERE (animals.Lop = '".$checkLop."') AND (animals.TenKhoaHoc LIKE '%".$kq."%')
+            GROUP BY animals.TenKhoaHoc
+            ORDER BY animals.TenKhoaHoc";
+        }
+        else
+            if($checkLop == "Tất cả" && $checkHo == "Tất cả")
+            {
+                $sql = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                FROM animals LEFT JOIN animals_img 
+                ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                WHERE (animals.Bo = '".$checkBo."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenKhoaHoc LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+                GROUP BY animals.TenKhoaHoc";
+            
+                $sql1 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                FROM animals LEFT JOIN animals_img 
+                ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                WHERE (animals.Bo = '".$checkBo."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+                GROUP BY animals.TenKhoaHoc
+                ORDER BY animals.TenTiengViet";
+            
+                $sql2 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                FROM animals LEFT JOIN animals_img 
+                ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                WHERE (animals.Bo = '".$checkBo."') AND (animals.TenKhoaHoc LIKE '%".$kq."%')
+                GROUP BY animals.TenKhoaHoc
+                ORDER BY animals.TenKhoaHoc";
+            }
+            else
+                if($checkLop == "Tất cả" && $checkBo == "Tất cả")
+                {
+                    $sql = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                    FROM animals LEFT JOIN animals_img 
+                    ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                    WHERE (animals.Ho = '".$checkHo."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenKhoaHoc LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+                    GROUP BY animals.TenKhoaHoc";
+                
+                    $sql1 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                    FROM animals LEFT JOIN animals_img 
+                    ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                    WHERE (animals.Ho = '".$checkHo."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+                    GROUP BY animals.TenKhoaHoc
+                    ORDER BY animals.TenTiengViet";
+                
+                    $sql2 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                    FROM animals LEFT JOIN animals_img 
+                    ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                    WHERE (animals.Ho = '".$checkHo."') AND (animals.TenKhoaHoc LIKE '%".$kq."%')
+                    GROUP BY animals.TenKhoaHoc
+                    ORDER BY animals.TenKhoaHoc";
+                }
+                else
+                    if($checkLop == "Tất cả")
+                    {
+                        $sql = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                        FROM animals LEFT JOIN animals_img 
+                        ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                        WHERE (animals.Ho = '.$checkHo') AND (animals.Bo = '".$checkBo."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenKhoaHoc LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+                        GROUP BY animals.TenKhoaHoc";
+                    
+                        $sql1 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                        FROM animals LEFT JOIN animals_img 
+                        ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                        WHERE (animals.Ho = '".$checkHo."') AND (animals.Bo = '".$checkBo."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+                        GROUP BY animals.TenKhoaHoc
+                        ORDER BY animals.TenTiengViet";
+                    
+                        $sql2 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                        FROM animals LEFT JOIN animals_img 
+                        ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                        WHERE (animals.Ho = '".$checkHo."') AND (animals.Bo = '".$checkBo."') AND (animals.TenKhoaHoc LIKE '%".$kq."%')
+                        GROUP BY animals.TenKhoaHoc
+                        ORDER BY animals.TenKhoaHoc";
+                    }
+                    else
+                        if($checkBo == "Tất cả")
+                        {
+                            $sql = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                            FROM animals LEFT JOIN animals_img 
+                            ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                            WHERE (animals.Ho = '".$checkHo."') AND (animals.Lop = '".$checkLop."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenKhoaHoc LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+                            GROUP BY animals.TenKhoaHoc";
+                        
+                            $sql1 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                            FROM animals LEFT JOIN animals_img 
+                            ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                            WHERE (animals.Ho = '".$checkHo."') AND (animals.Lop = '".$checkLop."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+                            GROUP BY animals.TenKhoaHoc
+                            ORDER BY animals.TenTiengViet";
+                        
+                            $sql2 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                            FROM animals LEFT JOIN animals_img 
+                            ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                            WHERE (animals.Ho = '".$checkHo."') AND (animals.Lop = '".$checkLop."') AND (animals.TenKhoaHoc LIKE '%".$kq."%')
+                            GROUP BY animals.TenKhoaHoc
+                            ORDER BY animals.TenKhoaHoc";
+                        }
+                        else
+                            if($checkHo == "Tất cả")
+                            {
+                                $sql = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                                FROM animals LEFT JOIN animals_img 
+                                ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                                WHERE (animals.Bo = '".$checkBo."') AND (animals.Lop = '".$checkLop."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenKhoaHoc LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+                                GROUP BY animals.TenKhoaHoc";
+                            
+                                $sql1 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                                FROM animals LEFT JOIN animals_img 
+                                ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                                WHERE (animals.Bo = '".$checkBo."') AND (animals.Lop = '".$checkLop."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+                                GROUP BY animals.TenKhoaHoc
+                                ORDER BY animals.TenTiengViet";
+                            
+                                $sql2 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                                FROM animals LEFT JOIN animals_img 
+                                ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                                WHERE (animals.Bo = '".$checkBo."') AND (animals.Lop = '".$checkLop."') AND (animals.TenKhoaHoc LIKE '%".$kq."%')
+                                GROUP BY animals.TenKhoaHoc
+                                ORDER BY animals.TenKhoaHoc";
+                            }
+                            else
+                            {
+                                $sql = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                                FROM animals LEFT JOIN animals_img 
+                                ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                                WHERE (animals.Lop = '".$checkLop."') AND (animals.Bo = '".$checkBo."') AND (animals.Ho = '".$checkHo."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenKhoaHoc LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+                                GROUP BY animals.TenKhoaHoc";
+                            
+                                $sql1 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                                FROM animals LEFT JOIN animals_img 
+                                ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                                WHERE (animals.Lop = '".$checkLop."') AND (animals.Bo = '".$checkBo."') AND (animals.Ho = '".$checkHo."') AND ((animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%'))
+                                GROUP BY animals.TenKhoaHoc
+                                ORDER BY animals.TenTiengViet";
+                            
+                                $sql2 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
+                                FROM animals LEFT JOIN animals_img 
+                                ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
+                                WHERE (animals.Lop = '".$checkLop."') AND (animals.Bo = '".$checkBo."') AND (animals.Ho = '".$checkHo."') AND (animals.TenKhoaHoc LIKE '%".$kq."%')
+                                GROUP BY animals.TenKhoaHoc
+                                ORDER BY animals.TenKhoaHoc";
+                            }                           
 
-    $sql1 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
-    FROM animals LEFT JOIN animals_img 
-    ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
-    WHERE (animals.TenTiengViet LIKE '%".$kq."%') OR (animals.TenDiaPhuong LIKE '%".$kq."%')
-    GROUP BY animals.TenKhoaHoc
-    ORDER BY animals.TenTiengViet";
-
-    $sql2 = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
-    FROM animals LEFT JOIN animals_img 
-    ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 
-    WHERE (animals.TenKhoaHoc LIKE '%".$kq."%')
-    GROUP BY animals.TenKhoaHoc
-    ORDER BY animals.TenKhoaHoc";
 
     $result=$con->query($sql);
     $result1=$con->query($sql1);
