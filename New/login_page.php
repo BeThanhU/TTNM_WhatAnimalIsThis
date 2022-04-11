@@ -1,3 +1,11 @@
+<?php 
+  session_start();
+  include_once "php/connection.php";
+  if(isset($_SESSION['user_id'])){
+    header("location: users_page.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,6 +40,7 @@
     </div>  
     <?php include 'footer.php'; ?>
 <script src="js/script.js"></script>
+<script src="js/login.js"></script>
 <script src="js/pass-show-hide.js"></script>
 
 </body>

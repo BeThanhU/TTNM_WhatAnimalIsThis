@@ -1,9 +1,10 @@
 <?php
-$con = new mysqli("localhost","root","","db_animals");
-if ($con -> connect_errno) {
-    echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-exit();
-}                $con->set_charset("utf8");
+                $con = new mysqli("localhost","root","","db_animals");
+                if ($con -> connect_errno) {
+                    echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+                exit();
+                }                
+                $con->set_charset("utf8");
                 $sql = "SELECT animals.TenKhoaHoc, animals.TenTiengViet, animals.TenDiaPhuong, animals_img.HinhAnh 
                 FROM animals LEFT JOIN animals_img 
                 ON animals.TenKhoaHoc = animals_img.TenKhoaHoc 

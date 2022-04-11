@@ -1,0 +1,41 @@
+.avatar{
+    margin: auto;
+    width: max-content;
+    padding-top: 50px;
+}
+.avatar img{
+    object-fit: cover;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.fullname{
+    text-align: center;
+    padding: 20px;
+}
+.fullname p{
+    font-size: 30px;
+    font-weight: 500;
+}
+.button{
+    margin: auto;
+    width: max-content;
+    display: flex;
+}
+
+.button .update, .button .logout{
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    background: #2d9e29;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    margin: 0 10px;
+}
+.button .update:hover, .button .logout:hover{
+    background: #32849b;
+
+}
