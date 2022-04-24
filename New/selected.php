@@ -1,17 +1,12 @@
 <?php
-    $con = new mysqli("localhost","root","","db_animals");
-    if ($con -> connect_errno) {
-        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-    exit();
-    }
-    $con->set_charset("utf8");
+    include_once "php/connection.php";
     $sql = "SELECT * FROM animals GROUP BY Lop";
     $sql1 = "SELECT * FROM animals GROUP BY Bo";
     $sql2 = "SELECT * FROM animals GROUP BY Ho";
 
-    $result=$con->query($sql);
-    $result1=$con->query($sql1);
-    $result2=$con->query($sql2);
+    $result=$conn->query($sql);
+    $result1=$conn->query($sql1);
+    $result2=$conn->query($sql2);
 
     if(mysqli_num_rows($result) == 0){
         echo "<p align='center'>Không tìm thấy thông tin trong hệ thống!!!</p>";

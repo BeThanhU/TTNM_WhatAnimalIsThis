@@ -11,6 +11,7 @@
             $enc_pass = $row['password'];
             if($user_pass === $enc_pass){
                     $_SESSION['user_id'] = $row['user_id'];
+                    $_SESSION['role'] = $row['role'];
                     echo "success";
             }else{
                 echo "Tài khoản hoặc mật khẩu không chính xác !";

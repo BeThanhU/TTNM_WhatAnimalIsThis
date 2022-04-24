@@ -9,7 +9,7 @@
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <div class="wrapper">
+    <div class="content">
         <section class="form signup">
         <header>Đăng ký tài khoản</header>
         <form action="php/signup.php" method="POST" enctype="multipart/form-data" autocomplete="off">
@@ -34,8 +34,9 @@
             </div>
             <div class="field image">
             <label>Nhập ảnh đại diện</label>
-            <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
+            <input id="file-input" type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required>
             </div>
+            <div id="preview"></div>
             <div class="field button">
             <input type="submit" name="submit" value="Đăng ký">
             </div>
@@ -47,6 +48,7 @@
 <script src="js/script.js"></script>
 <script src="js/signup.js"></script>
 <script src="js/pass-show-hide.js"></script>
+<script src="js/preview.js"></script>
 
 </body>
 </html>

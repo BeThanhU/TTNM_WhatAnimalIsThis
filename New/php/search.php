@@ -1,11 +1,5 @@
 <?php
-    $con = new mysqli("localhost","root","","db_animals");
-    if ($con -> connect_errno) {
-        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-    exit();
-    }   
-    $con->set_charset("utf8");
-
+    include_once "connection.php";
     $kq=$_GET['kqtk'];
     $checkLop=$_GET['Lop'];
     $checkBo=$_GET['Bo'];
@@ -194,9 +188,9 @@
                             }                           
 
 
-    $result=$con->query($sql);
-    $result1=$con->query($sql1);
-    $result2=$con->query($sql2);
+    $result=$conn->query($sql);
+    $result1=$conn->query($sql1);
+    $result2=$conn->query($sql2);
 
         if(mysqli_num_rows($result) == 0){
             echo "<p align='center'>Không tìm thấy động vật trong hệ thống!!!</p>";

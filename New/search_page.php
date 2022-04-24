@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body onload="timkiem(input.value)">
+<body onload="timkiem(input.value, Lop.value, Bo.value, Ho.value)">
     <?php include 'header.php'; ?>
     <div class="content">
         <h3>TÌM KIẾM NÂNG CAO</h3>
@@ -20,7 +20,7 @@
                     else
                         $input = "";
                       ?>
-                <input id="input" type="text" placeholder="Nhập tên động vật..."  value="<?php echo $input ?>">
+                <input id="input" type="text" placeholder="Nhập tên động vật.."  value="<?php echo $input ?>">
                 </a>
             </div>
             <div class="content-search-select">

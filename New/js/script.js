@@ -29,5 +29,59 @@
       xmlhttp.open("GET","php/search.php?kqtk="+str1+"&Lop="+str2+"&Bo="+str3+"&Ho="+str4,true);
       xmlhttp.send();
       }
+      function readMore() {
+        const moreText = document.getElementsByClassName("more"); 
+        const btnText = document.getElementById("read-more");
 
+        if (moreText[0].style.display === "none") {
+          for(var i = 0; i < moreText.length; i++) {
+            moreText[i].style.display = "block";
+          }
+          btnText.innerHTML = "Ẩn đi"; 
 
+        } else {
+          for(var i = 0; i < moreText.length; i++) {
+            moreText[i].style.display = "none";
+          }
+          btnText.innerHTML = "Xem thêm"; 
+        }
+      }
+      function readMoreUpdate() {
+        const moreTextUpdate = document.getElementsByClassName("moreUpdate"); 
+        const btnTextUpdate = document.getElementById("read-more-update");
+
+        if (moreTextUpdate[0].style.display === "none") {
+          for(var i = 0; i < moreTextUpdate.length; i++) {
+            moreTextUpdate[i].style.display = "block";
+          }
+          btnTextUpdate.innerHTML = "Ẩn đi"; 
+
+        } else {
+          for(var i = 0; i < moreTextUpdate.length; i++) {
+            moreTextUpdate[0].style.display = "none";
+          }
+          btnTextUpdate.innerHTML = "Xem thêm"; 
+        }
+      }
+
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = x.length;
+        }
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }

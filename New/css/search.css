@@ -1,5 +1,6 @@
 .content{    
-    height: max-content;
+    width: 80%;
+    margin: 20px auto;
 }
 .content h3{
     font-size: 25px;
@@ -11,12 +12,12 @@
 }
 
 .content-search-bar{
-    margin: auto;
+    margin: 20px auto;
     text-align: center;
     background-color: #159912;
-    border-radius: 50px;
+    border-radius: 7px;
     height: 30px;
-    width: 30%;
+    width: 40%;
     padding: 10px 0;
 }
 .content-search-bar input{
@@ -24,7 +25,7 @@
     color: #fff;
     font-size: 20px;
     border: none;
-    width: 85%;
+    width: 90%;
     outline: none;
 }
 
@@ -34,7 +35,7 @@
     padding: 2px
 }
 .content-search-select{
-    margin: 15px auto;
+    margin: 25px auto;
     width: max-content;
     display: flex;
 }
@@ -87,15 +88,17 @@ button:hover{
     grid-template-columns: auto auto auto;
 }
 .div-results-items{
-    width: 400px;
+    width: 300px;
     height: max-content;
     margin: 20px auto;
 }
 .div-results-items a{
     font-weight: 600;
 }
-.result-img{
+.result-img img{
     text-align: center;
+    height: 150px;
+    object-fit: contain;
 }
 .result-name{
     text-align: center;
@@ -114,6 +117,10 @@ button:hover{
 }
 
 @media screen and (max-width: 768px) {
+    .content{
+       width: 95%;
+       margin: auto;
+    }
     .content-search-select{
         display: block;
     }

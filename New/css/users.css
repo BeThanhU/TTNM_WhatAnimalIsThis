@@ -25,7 +25,6 @@
 
 .button .update, .button .logout{
     border: none;
-    color: #fff;
     font-size: 18px;
     font-weight: 600;
     background: #2d9e29;
@@ -35,7 +34,48 @@
     text-align: center;
     margin: 0 10px;
 }
+.button .update a, .button .logout a{
+    color: white;
+}
 .button .update:hover, .button .logout:hover{
     background: #32849b;
-
+    color: black;
 }
+.table_update table{
+    border: 1px solid black;
+    margin: 50px auto;
+    margin-top: 30px;
+    width: 50%;
+    border-collapse: collapse;
+}
+.table_update table th{
+    border: 1px solid black;
+    padding: 20px;
+}
+.table_update table td{
+    border: 1px solid black;
+    padding: 20px;
+}
+.status{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.icon{
+    text-align: center;
+    font-size: 25px;
+}
+.icon i:hover{
+    color: black;
+    cursor: pointer;
+}
+.fa-check{
+    color: green;
+}
+.fa-xmark{
+    color: red;
+}
+

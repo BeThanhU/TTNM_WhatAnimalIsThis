@@ -1,65 +1,76 @@
+.topnav-search{
+    height: 45px !important;;
+}
 .content-detail{
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 .product-details{
     border: 1px solid gray;
-    margin: 10px;
-    display: flex;
+    margin: 20px 0;
     justify-content: space-between;
+    border-radius: 7px;
+    padding: 20px 0;
+}
+.product-title{
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    text-align: center;
+}
+.product{
+    display: flex;
 }
 .product-images{
     width: 50%;
-    margin: auto;
+    margin: 0 40px;
 }
 .product-images img{
-    object-fit: cover;
-    cursor: pointer;
-    width: 500px;
     margin: auto;
-    padding: auto;
-    display: flex;
+    width: 90%;
+    padding: 0 20px;
 }
 
 .details{
     width: 50%;
-    margin: 20px;
+    margin: 0 20px;
 }
 
 .details .product-brand{
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: 17px;
     margin: 7px;
 }
-.details .product-brand{
-    text-transform: capitalize;
-    font-size: 20px;
-    margin: 7px;
-}
+
 .details .product-brand span{
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 800;
 }
 
 .detail-des{
     border: 1px solid gray;
-    margin: 10px;
+    border-radius: 7px;
+    margin: 20px 0;
     justify-content: space-between;
     padding: 7px 70px;
 }
 .heading{
-    font-size: 30px;
+    font-size: 20px;
+    font-weight: 600;
     margin: 15px 0;
 }
 
 .des{
     color: black;
     text-indent: 50px;
-    font-size: 18px;
+    font-size: 16px;
+    text-align: justify;
 }
 .baoton{
-    font-size: 18px;
+    font-size: 16px;
     margin: 10px 0;
+    text-indent: 50px;
 }
 
 .link{
@@ -81,11 +92,42 @@
   .link a:hover{
     color: gray;
   }
-
+.detail-lienquan{
+    border: 1px solid gray;
+    border-radius: 7px;
+    margin: 20px 0;
+}
+.detail-lienquan .heading{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.lienquan{
+    display: flex;
+    margin: auto;
+    text-align: center;
+}
+.div-results{
+    margin: auto;
+    width: 25%;
+    margin: 10px 0;
+}
+.div-results img{
+    object-fit: cover;
+    width: 180px;
+    height: 120px;
+    margin: auto;
+}
+.mySlides{
+    display: none;
+}
 @media screen and (max-width: 768px) {
-    .product-details{
+    .product{
         display: block;
         margin: 10px;
+    }
+    .product-title{
+        text-align: center;
     }
     .details{
         text-align: center;
@@ -95,17 +137,23 @@
     .product-images img{
         object-fit: cover;
         cursor: pointer;
-        width: 500px;
         margin: auto;
     }
     .product-images{
-    width: 100%;
-    margin: 20px auto;
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
     }
     .detail-des{
         margin: 10px;
     }
     .heading{
         text-align: center;
+    }
+    .lienquan{
+        display: block;
+    }
+    .div-results{
+        width: 100%;
     }
 }

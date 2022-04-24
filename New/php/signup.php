@@ -28,8 +28,8 @@
                                 $new_img_name = $time.$img_name;
                                 if(move_uploaded_file($tmp_name,"../images/".$new_img_name)){
                                     $encrypt_pass = md5($password);
-                                    $insert_query = mysqli_query($conn, "INSERT INTO users (fullname, username, password, img)
-                                    VALUES ('{$fullname}', '{$username}', '{$encrypt_pass}', '{$new_img_name}')");
+                                    $insert_query = mysqli_query($conn, "INSERT INTO users (fullname, username, password, img, role)
+                                    VALUES ('{$fullname}', '{$username}', '{$encrypt_pass}', '{$new_img_name}', 'user')");
                                     echo "success";
                                 }
                             }

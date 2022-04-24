@@ -17,7 +17,7 @@
 </head>
 <body>
     <?php include 'header.php'; ?>
-        <div class="wrapper">
+        <div class="content">
         <section class="form login">
         <header>Đăng nhập</header>
         <form action="php/login.php" method="POST" enctype="multipart/form-data" autocomplete="off">

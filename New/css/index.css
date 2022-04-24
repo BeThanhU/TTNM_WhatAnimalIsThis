@@ -1,98 +1,137 @@
 .content{
+    width: 80%;
+    margin: 20px auto;
     display: flex;
 }
+h3{
+    text-align: center;
+}
+.content-top{
+    display: flex;
+}
+.content-left{        
+    width: 80%;
+}
 .content-introduce{
-    text-align: justify;
-    border: 1px solid gray;
-    width: 50%;
-    margin: 10px;
-    margin-right: 7px;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 0 10px;
+    margin-bottom: 20px;
     padding: 10px;
 }
-.content-introduce h3{
+.content-user{
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 0 10px;
+    padding: 10px 0;
+}
+.content-left p{
+    font-size: 16px;
+    text-align: justify;
+    padding: 10px;
+}
+ul{
+    font-size: 16px;
+    text-align: justify;
+    text-indent: 10px;}
+li{
+    padding: 5px 10px;
+    list-style: none;
+    text-indent: 20px;
+}
+.content-user ul{
+    font-size: 15px;
+    text-align: justify;
+}
+.content-user li{
+    padding: 5px 0;
+    list-style: none;
+    text-indent: 20px;
+}
+.more, .moreUpdate{
+    display: none;
+}
+.more:hover, .moreUpdate:hover{
+    color:black;
+}
+#read-more, #read-more-update{
     text-align: center;
-    font-size: 20px;
+    color: blue;
+    font-weight: 600;
+    cursor: pointer;
 }
-.content-introduce p{
-    margin: 15px 20px;
-    text-indent: 15px;
-    font-size: 16px;
+.content-right{
+    width: 50%;
 }
-.content-introduce ul{
-    margin: 15px 20px;
-    text-indent: 15px; 
-    font-size: 16px;
+.content-new{
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 20px 10px;
+    margin-bottom: 20px;
+    padding: 10px 0;
 }
-.content-introduce li{
-    margin: 15px 20px;
-    list-style-type: none;
-    text-indent: 25px;
-    font-size: 16px;     
+.content-new a{
+    font-weight: 600;
+    color: blue;
+}
+.content-new a:hover{
+    color: black;
+}
+.content-bottom{
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 0 10px;
+    padding: 10px;
+}
+.content-random{
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 0 10px;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 .content-trend{
     text-align: center;
-    border: 1px solid gray;
-    width: 50%;
-    margin: 10px;
-    margin-left: 7px;
-    padding: 10px;
-    height: max-content;
+    margin: auto;
+    display: grid;    
+    grid-template-columns: auto auto;
 }
-.content-trend h3{
-    text-align: center;
-    font-size: 20px;
+.div-results{
+    margin: 20px auto;
+    width: 230px;
 }
-.card{
-    width: 180px;
-    height: 200px;
-    display: inline-block;
-    border-radius: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-    margin: 20px;
-    background-position: center;
-    background-size: cover;
-    border: 0.25px solid black;
-    transition: transform 0.5s;
+.div-results a{
+    color: blue;
+    font-weight: 600;
 }
-.card p{
-    color: #fff;
-    background-color: black;
-    margin-top: 100%;
-    text-align: center;
-    border-radius: 0 0 10px 10px;
+.div-results a:hover{
+    color: black;
+    font-weight: 600;
 }
-
-.card1{
-    background-image: url(../img/Python\ molurus-LQNgon-001\ -\ Ngôn\ Lâm\ Quang.JPG);
+.result-img img{
+    height: 150px;
+    width: 230px;
+    object-fit: cover;
 }
-
-.card2{
-    background-image: url(../img/Eutropis\ multifasciatus-LQNgon-001\ -\ Ngôn\ Lâm\ Quang.JPG);
-}
-
-.card3{
-    background-image: url(../img/Hylarana\ erythraea-LQNgon-002\ -\ Ngôn\ Lâm\ Quang.JPG);
-}
-
-.card4{
-    background-image: url(../img/Hemidactylus\ garnotii-LQNgon-002\ -\ Ngôn\ Lâm\ Quang.JPG);
-}
-
-.card:hover{
-    transform: translateY(-10px);
-}
-
-@media screen and (max-width: 768px) {
-    .content{
+@media screen and (max-width: 768px) {    
+    .content{       
+        margin: auto;      
+        width: 90%;
+    }
+    .content-top{
         display: block;
-        margin: 10px;
     }
-    .content-introduce, .content-trend{
-        margin: 0;
-        margin-top: 10px;
-        height: max-content;
-        width: auto;
+    .content-left{
+        width: 100%;
+        margin: auto;
     }
+     .content-right{
+        width: 100%;
+        margin: 20px auto;
+    }
+    .content-trend{
+        display: block;
+    }
+    
 }
   
