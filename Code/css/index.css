@@ -1,0 +1,151 @@
+.content{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+}
+h3{
+    text-align: center;
+    font-size: 17px;
+}
+.content-top{
+    display: flex;
+}
+.content-left{        
+    width: 80%;
+}
+.content-introduce{
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 0 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+}
+.content-user{
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 0 10px;
+    padding: 10px 0;
+    background-color: white;
+}
+.content-left p{
+    font-size: 15px;
+    text-align: justify;
+    padding: 10px;
+}
+ul{
+    font-size: 15px;
+    text-align: justify;
+    text-indent: 10px;}
+li{
+    padding: 5px 10px;
+    list-style: none;
+    text-indent: 20px;
+}
+.content-user ul{
+    font-size: 15px;
+    text-align: justify;
+}
+.content-user li{
+    padding: 5px 0;
+    list-style: none;
+    text-indent: 20px;
+    font-size: 15px;
+}
+.more, .moreUpdate{
+    display: none;
+}
+.more:hover, .moreUpdate:hover{
+    color:black;
+}
+#read-more, #read-more-update{
+    text-align: center;
+    color: blue;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: none;
+}
+.content-right{
+    width: 50%;
+}
+.content-new{
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 20px 10px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    font-size: 15px;
+    background-color: white;
+}
+.content-new a{
+    font-weight: 500;
+    color: blue;
+}
+.content-new a:hover{
+    color: black;
+}
+.content-bottom{
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 0 10px;
+    padding: 10px;
+}
+.content-random{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 0 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 15px;
+}
+.content-trend{
+    text-align: center;
+    margin: auto;
+    display: grid;    
+    grid-template-columns: auto auto;
+}
+.div-results{
+    margin: 20px auto;
+    width: 230px;
+}
+.div-results a{
+    color: blue;
+    font-weight: 600;
+}
+.div-results a:hover{
+    color: black;
+    font-weight: 600;
+}
+.result-img img{
+    height: 150px;
+    width: 230px;
+    object-fit: cover;
+}
+@media screen and (max-width: 768px) {    
+    body, html{
+        width: 100%;
+    }
+    .content{       
+        margin: auto;      
+        width: 95%;
+    }
+    .content-top{
+        display: block;
+    }
+    .content-left{
+        width: 100%;
+        margin: auto;
+    }
+     .content-right{
+        width: 100%;
+        margin: 20px auto;
+    }
+    .content-trend{
+        display: block;
+    }
+    
+}
+  

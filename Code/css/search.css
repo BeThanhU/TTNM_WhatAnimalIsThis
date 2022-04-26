@@ -1,0 +1,143 @@
+.content{    
+    width: 80%;
+    margin: 20px auto;
+    font-size: 15px;
+}
+.content h3{
+    font-size: 25px;
+    text-align: center;
+    margin: 10px auto;
+}
+.content-search{
+    margin: 10px;
+}
+
+.content-search-bar{
+    margin: 20px auto;
+    text-align: center;
+    background-color: #159912;
+    border-radius: 7px;
+    height: 30px;
+    width: 40%;
+    padding: 10px 0;
+}
+.content-search-bar input{
+    background-color: #159912;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    width: 90%;
+    outline: none;
+}
+
+.content-search-bar i{
+    font-size: 25px;
+    color: white;
+    padding: 2px
+}
+.content-search-select{
+    margin: 25px auto;
+    width: max-content;
+    display: flex;
+}
+.content-search-select select{
+    height: 30px;
+    margin: 0 20px;
+    background-color: #159912;
+    color: white;
+    width: max-content;
+}
+.content-search-select select option{
+    border: 1px solid red;
+}
+.content-search-submit{
+    width: max-content;
+    margin: auto;
+}
+
+button{
+    height: 40px;
+    width: 120px;
+    font-size: 22px;
+    background-color: #159912;
+    color: white;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+button:hover{
+    color: aqua;
+    background-color: #206116;
+    cursor: pointer;
+}
+.search-result h3 {
+    font-size: 25px;
+    text-align: center;
+    margin: 10px auto;
+}
+#ketquatk{
+    background-color: white;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+    border-radius: 7px;
+}
+#ketquatk h2{
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+.div-results{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.div-results-items{
+    width: 300px;
+    height: max-content;
+    margin: 20px auto;
+}
+.div-results-items a{
+    font-weight: 600;
+}
+.result-img img{
+    text-align: center;
+    height: 150px;
+    object-fit: contain;
+}
+.result-name{
+    text-align: center;
+}
+.div-results-2{
+    margin: auto;
+    width: 400px;
+    height: max-content;
+    margin: 20px auto;
+}
+.result-img-2{
+    text-align: center;
+}
+.result-name-2{
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .content{
+       width: 95%;
+       margin: auto;
+    }
+    .content-search-select{
+        display: block;
+    }
+    .content-search-select-citems{
+        text-align: right;
+    }    
+    .content-search-select-items select{
+        margin: 10px;
+        width: 200px;
+    }
+    .content-search-bar{
+        width: 70%;
+    }
+    .div-results{
+        display: block;
+    }
+}
