@@ -8,6 +8,7 @@
 <li>View details</li>
 <li>Sign up</li>
 <li>Login/Logout</li>
-<li>The member submits an updated database - (Coming soon)</li>
+<li>The member submits an updated database</li>
+<li>Admin database management</li>
 </ul>
 <p>Update: 10/04/2022</p>
